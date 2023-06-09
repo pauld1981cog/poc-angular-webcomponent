@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "poc-angular-webcomponents",
+            "prefix": "poc-angular-webcomponent",
             "style": "kebab-case"
           }
         ]

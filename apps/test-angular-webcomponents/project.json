@@ -2,7 +2,7 @@
   "name": "test-angular-webcomponents",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "poc-angular-webcomponents",
+  "prefix": "poc-angular-webcomponent",
   "sourceRoot": "apps/test-angular-webcomponents/src",
   "tags": [],
   "targets": {

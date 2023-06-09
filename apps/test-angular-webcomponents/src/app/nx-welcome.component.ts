@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'poc-angular-webcomponents-nx-welcome',
+  selector: 'poc-angular-webcomponent-nx-welcome',
   template: `
     <!--
      * * * * * * * * * * * * * * * * * * * * * * * * * * * *
