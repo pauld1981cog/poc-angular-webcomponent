@@ -1,0 +1,33 @@
+{
+  "name": "test-angular-webcomponents-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/test-angular-webcomponents-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/test-angular-webcomponents-e2e/cypress.config.ts",
+        "devServerTarget": "test-angular-webcomponents:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "test-angular-webcomponents:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "test-angular-webcomponents:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/test-angular-webcomponents-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["test-angular-webcomponents"]
+}
