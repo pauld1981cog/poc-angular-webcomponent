@@ -4,12 +4,14 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
+import { CommonWebComponentsModule } from '@poc-angular-webcomponent/common-web-components';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
+    CommonWebComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

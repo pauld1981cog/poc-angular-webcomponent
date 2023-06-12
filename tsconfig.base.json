@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@poc-angular-webcomponent/common-web-components": [
+        "libs/common-web-components/src/index.ts"
+      ],
+      "@poc-angular-webcomponent/gmap-web-components": [
+        "libs/gmap-web-components/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

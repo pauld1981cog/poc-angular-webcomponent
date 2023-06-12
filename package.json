@@ -2,7 +2,11 @@
   "name": "@poc-angular-webcomponent/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve test-angular-webcomponents",
+    "build": "nx build test-angular-webcomponents",
+    "test": "nx test test-angular-webcomponents"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.0.0",
