@@ -1,0 +1,11 @@
+<google-map height="400px" width="750px" [center]="center" [zoom]="zoom" (mapClick)="addMarker($event)"
+    (mapMousemove)="move($event)">
+    <map-marker #marker="mapMarker" *ngFor="let markerObj of markerList" [position]="markerObj.position"
+        [icon]="markerObj.icon" [options]="markerOptions" (mapClick)="openInfoWindow(marker)"></map-marker>
+    <map-info-window>
+        <common-flight-details [flight]="flightDtlModel"></common-flight-details>
+    </map-info-window>
+</google-map>
+
+<div>Latitude: {{display?.lat}}</div>
+<div>Longitude: {{display?.lng}}</div>
