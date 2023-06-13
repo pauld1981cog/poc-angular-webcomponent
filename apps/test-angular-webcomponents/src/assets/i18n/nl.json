@@ -1,0 +1,9 @@
+{
+    "Latitude": "Breedtegraad",
+    "Longitude": "Lengtegraad",
+    "FlightDetails": "Vluchtdetails",
+    "ID": "ID kaart",
+    "Name": "Naam",
+    "Description": "Beschrijving",
+    "Type": "Type"
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { CommonFlightDetailsModel } from 'libs/common-web-components/src/lib/common-flight-details/models/common-flight-details-model';
 import { CommonUserDetailsModel } from 'libs/common-web-components/src/lib/common-user-details/models/common-user-details-model';
 
@@ -12,7 +13,9 @@ export class AppComponent {
   userDtlModel: CommonUserDetailsModel;
   flightDtlModel: CommonFlightDetailsModel = new CommonFlightDetailsModel();
 
-  constructor() {
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['en', 'nl']);
+    translate.setDefaultLang('en');
     this.init();
 
     this.userDtlModel = {
@@ -32,5 +35,9 @@ export class AppComponent {
     this.flightDtlModel.name = 'Flight Name 30001'
     this.flightDtlModel.desc = 'Description of FlithtNo20001';
     this.flightDtlModel.type = 'Passenger Flight';
+  }
+
+  switchLang(lang: string) {
+    this.translate.use(lang);
   }
 }

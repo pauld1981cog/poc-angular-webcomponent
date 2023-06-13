@@ -1,6 +1,18 @@
 <h1>Test Angular Webcomponent POC Project</h1>
 <router-outlet></router-outlet>
-
+<span class="form-inline">
+    <select 
+        class="form-control" 
+        #selectedLang 
+        (change)="switchLang(selectedLang.value)">
+      <option *ngFor="let language of translate.getLangs()" 
+        [value]="language"
+        [selected]="language === translate.currentLang">
+        {{ language }}
+      </option>
+    </select>
+  </span>
+  
 <app-gmap></app-gmap>
 
 <h2>Common User Details:</h2>
