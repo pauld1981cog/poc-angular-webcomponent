@@ -10,34 +10,28 @@ import { CommonUserDetailsModel } from 'libs/common-web-components/src/lib/commo
 })
 export class AppComponent {
   title = 'test-angular-webcomponents';
-  userDtlModel: CommonUserDetailsModel;
-  flightDtlModel: CommonFlightDetailsModel = new CommonFlightDetailsModel();
 
   constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'nl']);
-    translate.setDefaultLang('en');
-    this.init();
-
-    this.userDtlModel = {
-      id: 'User10001',
-      fName: 'Dipankar',
-      mName: '',
-      lName: 'Paul',
-      age: 41,
-      type: 'Passenger',
-    }
+    translate.addLangs(['en', 'en-US', 'en-IN', 'nl', 'nl-BE']);
+    translate.setDefaultLang(this.getUsersLocale());
+    this.init();    
   }
 
-  init() {
-    this.flightDtlModel = new CommonFlightDetailsModel();
-    this.flightDtlModel.id = 'FlightID10001';
-    this.flightDtlModel.fNo = 'FlithtNo20001';
-    this.flightDtlModel.name = 'Flight Name 30001'
-    this.flightDtlModel.desc = 'Description of FlithtNo20001';
-    this.flightDtlModel.type = 'Passenger Flight';
-  }
+  init() {}
 
   switchLang(lang: string) {
     this.translate.use(lang);
+  }
+
+  getUsersLocale(): string {
+    const defaultValue: string = 'en';
+    if (typeof window === 'undefined' || typeof window.navigator === 'undefined') {
+      return defaultValue;
+    }
+    const wn = window.navigator as any;
+    let lang = wn.languages ? wn.languages[0] : defaultValue;
+    lang = lang || wn.language || wn.browserLanguage || wn.userLanguage;
+    console.log('getUsersLocale()=>', lang);
+    return lang;
   }
 }

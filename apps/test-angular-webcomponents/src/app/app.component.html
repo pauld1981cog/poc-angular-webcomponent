@@ -1,22 +1,15 @@
 <h1>Test Angular Webcomponent POC Project</h1>
-<router-outlet></router-outlet>
+
 <span class="form-inline">
-    <select 
-        class="form-control" 
-        #selectedLang 
-        (change)="switchLang(selectedLang.value)">
-      <option *ngFor="let language of translate.getLangs()" 
-        [value]="language"
-        [selected]="language === translate.currentLang">
-        {{ language }}
-      </option>
-    </select>
-  </span>
-  
-<app-gmap></app-gmap>
+  <select class="form-control" #selectedLang (change)="switchLang(selectedLang.value)">
+    <option *ngFor="let language of translate.getLangs()" [value]="language"
+      [selected]="language === translate.currentLang">
+      {{ language }}
+    </option>
+  </select>
+</span>
+<button type="button" routerLink="">Home</button>
+<button type="button" routerLink="/customer">Customer</button>
+<button type="button" routerLink="/flight">Flight</button>
 
-<h2>Common User Details:</h2>
-<common-user-details [user]="userDtlModel"></common-user-details>
-
-<h2>Common Flight Details</h2>
-<common-flight-details [flight]="flightDtlModel"></common-flight-details>
+<router-outlet></router-outlet>
