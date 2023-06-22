@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonFlightDetailsModel } from 'libs/common-web-components/src/lib/common-flight-details/models/common-flight-details-model';
+import { FlightDetailsService } from './flight-details.service';
 
 @Component({
   selector: 'poc-angular-webcomponent-flight-details',
@@ -8,9 +9,15 @@ import { CommonFlightDetailsModel } from 'libs/common-web-components/src/lib/com
 })
 export class FlightDetailsComponent {
   flightDtlModel: CommonFlightDetailsModel = new CommonFlightDetailsModel();
+  flightColors = [
+    {key: 'code001', value: 'Red'},
+    {key: 'code002', value: 'Green'},
+    {key: 'code003', value: 'Yellow'},
+  ];
 
-  constructor() {
-    this.init();
+  constructor(private flightService: FlightDetailsService) {
+    //this.init();
+    this.fetchFlightDetails();
   }
 
   init() {
@@ -20,5 +27,12 @@ export class FlightDetailsComponent {
     this.flightDtlModel.name = 'Flight Name 30001'
     this.flightDtlModel.desc = 'Description of FlithtNo20001';
     this.flightDtlModel.type = 'Passenger Flight';
+  }
+
+  fetchFlightDetails() {
+    this.flightService.getFlightDetails()
+      .subscribe(response => {
+        this.flightDtlModel = response;
+      })
   }
 }

@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     CommonWebComponentsModule,
     GmapWebComponentsModule,
     TranslateModule.forRoot({
+      defaultLanguage: 'en',
       loader: {
         provide: TranslateLoader,
         useFactory: httpTranslateLoader,

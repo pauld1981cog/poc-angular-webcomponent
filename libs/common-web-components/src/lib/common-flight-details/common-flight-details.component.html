@@ -1,7 +1,8 @@
 <fieldset>
-    <legend>{{'FlightDetails' | translate}}:</legend>
+    <legend>{{pageNameKey + 'FlightDetails' | translate}}:</legend>
     <label>{{'ID' | translate}}: {{flight.id}}</label><br><br>
     <label>{{'Name' | translate}}: {{flight.name}}</label><br><br>
     <label>{{'Description' | translate}}: {{flight.desc}}</label><br><br>
     <label>{{'Type' | translate}}: {{flight.type}}</label><br><br>
+    <b><h3>{{'ShortDesc' | translate:flight}}</h3></b>
 </fieldset>

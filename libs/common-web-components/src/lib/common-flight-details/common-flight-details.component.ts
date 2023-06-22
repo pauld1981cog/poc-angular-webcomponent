@@ -8,5 +8,5 @@ import { CommonFlightDetailsModel } from './models/common-flight-details-model';
 })
 export class CommonFlightDetailsComponent {
   @Input() flight: CommonFlightDetailsModel = new CommonFlightDetailsModel();
-  
+  @Input() pageNameKey: string = '';
 }

@@ -1,2 +1,11 @@
 <h2>Common Flight Details</h2>
-<common-flight-details [flight]="flightDtlModel"></common-flight-details>
+<common-flight-details [flight]="flightDtlModel" [pageNameKey]="'Flight.'"></common-flight-details>
+<span class="form-inline">
+    <label>Flight Color: </label>
+    <select class="form-control">
+      <option *ngFor="let color of flightColors" [value]="color.key"
+        [selected]="color.key === flightDtlModel.flightColor">
+        {{'Color.' + color.value | translate}}
+      </option>
+    </select>
+  </span>

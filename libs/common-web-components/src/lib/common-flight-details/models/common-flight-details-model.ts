@@ -4,4 +4,5 @@ export class CommonFlightDetailsModel {
     name: string = ''
     desc: string = ''
     type: string = ''
+    flightColor: string = ''
 }
