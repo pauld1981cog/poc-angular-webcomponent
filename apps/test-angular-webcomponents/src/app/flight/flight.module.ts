@@ -7,11 +7,15 @@ import { FlightRoutingModule } from './flight-routing.module';
 import { FlightDetailsComponent } from './flight-details/flight-details.component';
 import { CommonWebComponentsModule } from '@poc-angular-webcomponent/common-web-components';
 import { FlightDetailsService } from './flight-details/flight-details.service';
+import { TruboWebLibModule } from '@poc-angular-webcomponent/trubo-web-lib';
 
 @NgModule({
   declarations: [FlightDetailsComponent],
-  imports: [CommonModule, TranslateModule, FlightRoutingModule, CommonWebComponentsModule],
+  imports: [CommonModule, TranslateModule, FlightRoutingModule, 
+    CommonWebComponentsModule, 
+    TruboWebLibModule
+  ],
   exports: [FlightDetailsComponent],
   providers: [FlightDetailsService]
 })
-export class FlightModule {}
+export class FlightModule { }

@@ -20,6 +20,9 @@
       ],
       "@poc-angular-webcomponent/gmap-web-components": [
         "libs/gmap-web-components/src/index.ts"
+      ],
+      "@poc-angular-webcomponent/trubo-web-lib": [
+        "libs/trubo-web-lib/src/index.ts"
       ]
     }
   },

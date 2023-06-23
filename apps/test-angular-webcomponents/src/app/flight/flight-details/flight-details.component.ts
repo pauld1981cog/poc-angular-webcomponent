@@ -14,6 +14,8 @@ export class FlightDetailsComponent {
     {key: 'code002', value: 'Green'},
     {key: 'code003', value: 'Yellow'},
   ];
+  departureDate: string = '2022-06-10T12:30:00Z';
+  arrivalDate: string = '2022-06-20T22:50:00Z';
 
   constructor(private flightService: FlightDetailsService) {
     //this.init();

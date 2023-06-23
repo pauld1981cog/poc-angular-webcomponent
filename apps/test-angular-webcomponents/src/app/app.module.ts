@@ -11,6 +11,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { CommonWebComponentsModule } from '@poc-angular-webcomponent/common-web-components';
 import { GmapWebComponentsModule } from '@poc-angular-webcomponent/gmap-web-components';
 import { HomeComponent } from './home/home.component';
+import { TruboWebLibModule } from '@poc-angular-webcomponent/trubo-web-lib';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent, HomeComponent],
@@ -29,6 +30,7 @@ import { HomeComponent } from './home/home.component';
         deps: [HttpClient],
       },
     }),
+    TruboWebLibModule
   ],
   providers: [],
   bootstrap: [AppComponent],
