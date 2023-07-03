@@ -17,7 +17,12 @@
         "tsConfig": "apps/test-angular-webcomponents/tsconfig.app.json",
         "assets": [
           "apps/test-angular-webcomponents/src/favicon.ico",
-          "apps/test-angular-webcomponents/src/assets"
+          "apps/test-angular-webcomponents/src/assets",
+          {
+            "glob": "**/*",
+            "input": "./node_modules/pspdfkit/dist/pspdfkit-lib/",
+            "output": "./assets/pspdfkit-lib/"
+          }
         ],
         "styles": ["apps/test-angular-webcomponents/src/styles.scss"],
         "scripts": []

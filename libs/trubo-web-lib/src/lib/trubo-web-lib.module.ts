@@ -5,6 +5,7 @@ import { TurboCurrencyPipe } from './currency/pipes/turbo-currency.pipe';
 import { TurboAddressComponent } from './address/components/turbo-address/turbo-address.component';
 import { TurboPhoneComponent } from './phone/components/turbo-phone/turbo-phone.component';
 import { TurboPhonePipe } from './phone/pipes/turbo-phone.pipe';
+import { TurboPdfViewerComponent } from './pdf/components/turbo-pdf-viewer/turbo-pdf-viewer.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -14,6 +15,7 @@ import { TurboPhonePipe } from './phone/pipes/turbo-phone.pipe';
     TurboAddressComponent,
     TurboPhoneComponent,
     TurboPhonePipe,
+    TurboPdfViewerComponent,
   ],
   exports: [
     TurboDatePipe,
@@ -21,6 +23,7 @@ import { TurboPhonePipe } from './phone/pipes/turbo-phone.pipe';
     TurboAddressComponent,
     TurboPhoneComponent,
     TurboPhonePipe,
+    TurboPdfViewerComponent,
   ],
 })
 export class TruboWebLibModule {}

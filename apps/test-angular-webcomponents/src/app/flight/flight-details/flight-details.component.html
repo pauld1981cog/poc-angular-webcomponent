@@ -9,5 +9,13 @@
       </option>
     </select>
   </span>
-  <div>Departure Date: {{departureDate | turboDate }}</div>
-  <div>Arrival Date: {{arrivalDate | turboDate }}</div>
+  <div>Departure Date: {{departureDate | turboDate : '' : 'en-US' }}</div>
+  <div>Arrival Date: {{arrivalDate | turboDate : '' : 'en-CA' }}</div>
+  <span class="form-inline">
+    <label>Role: </label>
+    <select class="form-control">
+      <option *ngFor="let role of roles" [value]="role.id">
+        {{role.value}}
+      </option>
+    </select>
+  </span>
