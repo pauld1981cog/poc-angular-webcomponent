@@ -24,7 +24,7 @@ export class FlightDetailsService {
   googleTranslateAPI(lang: string, text: string): Observable<any> {
     let answer = '';
     const url = 'https://translation.googleapis.com/language/translate/v2?';
-    return this.http.get(`${url}target=${lang}&key=${environment.googleAPIKey}&q=${text}`)
+    return this.http.get(`${url}target=${lang}&key=AIzaSyCupTc88pH2JBLMVHnOORLrPSy1zbEQjXU&q=${text}`)
   }
 
   // Error handling
