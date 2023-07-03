@@ -1,3 +1,6 @@
 <h2>Common User Details:</h2>
 <common-user-details [user]="userDtlModel"></common-user-details>
+Phone: {{phone | turboPhone}}<br>
+Salary: {{salary | currency:'CAD':'symbol':'4.2-2' }}<br>
+Salary (Custom Pipe): {{salary | turboCurrency: tuCurrModel}}
 
