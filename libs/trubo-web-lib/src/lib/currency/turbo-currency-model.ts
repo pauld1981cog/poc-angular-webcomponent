@@ -11,5 +11,5 @@ export interface TurboCurrencyModel {
     currencySymbol?: string;
     countryCode: string;
     countryName: string;
-    locale?: string;
+    locale: string;
 }

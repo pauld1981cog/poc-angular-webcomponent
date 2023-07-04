@@ -30,14 +30,14 @@ export class CustomerDetailsComponent {
       groupSize: [2, 3],
       identifier: 'symbol',
       identifierPadding: false,
-      identifierPosition: 'after',
+      identifierPosition: 'before',
       maximumFraction: 2,
       minimumFraction: 2,
       currencyCode: 'GBP',
       currencySymbol: '£',
       countryCode: 'GB',
       countryName: 'United Kingdom',
-      locale: 'en-US'
+      locale: 'en-GB'
     }
   }
 }

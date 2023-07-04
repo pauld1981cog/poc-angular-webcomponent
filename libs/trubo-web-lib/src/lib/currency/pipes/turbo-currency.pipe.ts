@@ -1,3 +1,4 @@
+import { CurrencyPipe } from '@angular/common';
 import { Pipe, PipeTransform } from '@angular/core';
 import { TurboCurrencyModel } from '../turbo-currency-model';
 import { turboCurrencyList } from '../turbo-currency-symbols';
@@ -7,11 +8,14 @@ import { turboCurrencyList } from '../turbo-currency-symbols';
 })
 export class TurboCurrencyPipe implements PipeTransform {
   transform(value: number, model: TurboCurrencyModel): string {
-    let curr: string = value.toString();
+    let curr: string | undefined = value.toString();
     let identifier: string = '';
     let identifierPadding: string = '';
+    console.log('model.locale=>', model.locale)
+    curr = new CurrencyPipe(model.locale, model.currencyCode).transform(value) as string;
+ 
 
-    if (model.identifier === 'symbol') {
+    if (!curr && model.identifier === 'symbol') {
       identifier = this.getSymbol(model);
       identifierPadding = model.identifierPadding ? ' ' : '';
       curr = model.identifierPosition === 'before' ? `${identifier}${identifierPadding}${curr}` : `${curr}${identifierPadding}${identifier}`;
